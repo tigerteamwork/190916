@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Condition2__c</fullName>
+    <externalId>false</externalId>
+    <label>Condition2</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Symptom2__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Conditions</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>headache</controllingFieldValue>
+            <controllingFieldValue>ithcing</controllingFieldValue>
+            <controllingFieldValue>wheezing</controllingFieldValue>
+            <controllingFieldValue>discomfort with urination</controllingFieldValue>
+            <controllingFieldValue>back pain</controllingFieldValue>
+            <controllingFieldValue>abd pain</controllingFieldValue>
+            <controllingFieldValue>red eyes</controllingFieldValue>
+            <controllingFieldValue>diarrhea</controllingFieldValue>
+            <controllingFieldValue>cough</controllingFieldValue>
+            <controllingFieldValue>vomiting</controllingFieldValue>
+            <controllingFieldValue>indigestion</controllingFieldValue>
+            <controllingFieldValue>rash</controllingFieldValue>
+            <controllingFieldValue>bug bite</controllingFieldValue>
+            <controllingFieldValue>animal bite</controllingFieldValue>
+            <controllingFieldValue>joint pain</controllingFieldValue>
+            <controllingFieldValue>fever</controllingFieldValue>
+            <controllingFieldValue>sore throat</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>headache</controllingFieldValue>
+            <valueName>migraine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>headache</controllingFieldValue>
+            <valueName>tension headache</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>headache</controllingFieldValue>
+            <valueName>high blood pressure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ithcing</controllingFieldValue>
+            <controllingFieldValue>rash</controllingFieldValue>
+            <controllingFieldValue>bug bite</controllingFieldValue>
+            <valueName>allergic reaction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ithcing</controllingFieldValue>
+            <controllingFieldValue>red eyes</controllingFieldValue>
+            <valueName>seasonal allergies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ithcing</controllingFieldValue>
+            <valueName>contact dermatitis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ithcing</controllingFieldValue>
+            <controllingFieldValue>rash</controllingFieldValue>
+            <valueName>poison ivy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ithcing</controllingFieldValue>
+            <controllingFieldValue>rash</controllingFieldValue>
+            <valueName>ringworm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ithcing</controllingFieldValue>
+            <controllingFieldValue>red eyes</controllingFieldValue>
+            <valueName>conjunctivitis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>wheezing</controllingFieldValue>
+            <controllingFieldValue>cough</controllingFieldValue>
+            <controllingFieldValue>fever</controllingFieldValue>
+            <valueName>bronchitis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>wheezing</controllingFieldValue>
+            <controllingFieldValue>cough</controllingFieldValue>
+            <controllingFieldValue>fever</controllingFieldValue>
+            <valueName>pneumonia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>wheezing</controllingFieldValue>
+            <controllingFieldValue>cough</controllingFieldValue>
+            <controllingFieldValue>fever</controllingFieldValue>
+            <valueName>flu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>wheezing</controllingFieldValue>
+            <valueName>asthma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>discomfort with urination</controllingFieldValue>
+            <controllingFieldValue>fever</controllingFieldValue>
+            <valueName>urine infection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>back pain</controllingFieldValue>
+            <controllingFieldValue>joint pain</controllingFieldValue>
+            <valueName>back strain</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>back pain</controllingFieldValue>
+            <controllingFieldValue>joint pain</controllingFieldValue>
+            <valueName>arthritis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>back pain</controllingFieldValue>
+            <controllingFieldValue>joint pain</controllingFieldValue>
+            <valueName>herniated disc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>back pain</controllingFieldValue>
+            <valueName>sciatica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>other</controllingFieldValue>
+            <controllingFieldValue>indigestion</controllingFieldValue>
+            <valueName>peptic ulcer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>abd pain</controllingFieldValue>
+            <controllingFieldValue>diarrhea</controllingFieldValue>
+            <controllingFieldValue>vomiting</controllingFieldValue>
+            <controllingFieldValue>fever</controllingFieldValue>
+            <valueName>gastroenteritis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>indigestion</controllingFieldValue>
+            <valueName>gastric reflux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>rash</controllingFieldValue>
+            <controllingFieldValue>bug bite</controllingFieldValue>
+            <controllingFieldValue>animal bite</controllingFieldValue>
+            <controllingFieldValue>fever</controllingFieldValue>
+            <valueName>skin infection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>rash</controllingFieldValue>
+            <controllingFieldValue>bug bite</controllingFieldValue>
+            <valueName>Lyme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>rash</controllingFieldValue>
+            <valueName>shingles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>rash</controllingFieldValue>
+            <valueName>measles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>rash</controllingFieldValue>
+            <controllingFieldValue>fever</controllingFieldValue>
+            <valueName>abscess</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>animal bite</controllingFieldValue>
+            <controllingFieldValue>joint pain</controllingFieldValue>
+            <valueName>fracture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>joint pain</controllingFieldValue>
+            <valueName>sprain</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>joint pain</controllingFieldValue>
+            <valueName>strain</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>joint pain</controllingFieldValue>
+            <valueName>gout</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>sore throat</controllingFieldValue>
+            <valueName>mononucleosis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>sore throat</controllingFieldValue>
+            <valueName>pharyngitis</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

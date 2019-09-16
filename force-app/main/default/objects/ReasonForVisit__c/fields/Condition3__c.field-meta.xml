@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Condition3__c</fullName>
+    <externalId>false</externalId>
+    <label>Condition3</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Symptom3__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Conditions</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>cough</controllingFieldValue>
+            <valueName>bronchitis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>cough</controllingFieldValue>
+            <valueName>pneumonia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>cough</controllingFieldValue>
+            <valueName>flu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>cough</controllingFieldValue>
+            <controllingFieldValue>indigestion</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>indigestion</controllingFieldValue>
+            <valueName>gastric reflux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>indigestion</controllingFieldValue>
+            <valueName>peptic ulcer</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

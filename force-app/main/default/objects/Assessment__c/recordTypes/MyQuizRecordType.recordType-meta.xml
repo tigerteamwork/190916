@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyQuizRecordType</fullName>
+    <active>true</active>
+    <label>My Quiz Record Type</label>
+    <picklistValues>
+        <picklist>AdditionalInformation__c</picklist>
+        <values>
+            <fullName>Closed Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Take Home</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

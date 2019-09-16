@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EndDateNotWeekend</fullName>
+    <active>true</active>
+    <errorConditionFormula>(WEEKDAY( StartDate__c ) = 1)
+||
+(WEEKDAY( EndDate__c ) = 7)</errorConditionFormula>
+    <errorDisplayField>EndDate__c</errorDisplayField>
+    <errorMessage>May not be Saturday or Sunday</errorMessage>
+</ValidationRule>
