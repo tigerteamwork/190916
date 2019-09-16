@@ -1,0 +1,9 @@
+<aura:component implements="force:hasRecordId" >
+
+        <lightning:button variant="brand" label="Brand action" title="Brand action" onclick="{! c.handleClick }" />
+
+        <lightning:button label="button001" onclick="handleClick"></lightning:button>
+
+
+
+</aura:component>	
