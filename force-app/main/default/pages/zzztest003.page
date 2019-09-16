@@ -1,0 +1,26 @@
+<apex:page standardController="Contact" recordSetVar="contactList" extensions="VFUserInputControllerExtension" docType="html-5.0">
+    
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputText value="{!messageFromController}">
+            </apex:outputText>
+            <apex:input value="{!inputFromUser}">
+            </apex:input>
+            <apex:commandButton action="{!getContact}" value="Get contact:  {!inputFromUser}"/>
+        </apex:pageBlock>
+        
+        <apex:pageBlock >
+            <apex:dataTable value="{!contactList}" var="contactItem"> 
+                <apex:column value="{!contactItem.name}" />
+                <apex:column />
+                <apex:column value="{!contactItem.account.name}" />
+                
+            </apex:dataTable>  
+        </apex:pageBlock>
+        
+        <apex:commandLink value="Try http REST" action="{!sendHttpRequest}" target="_blank" />
+        
+        
+    </apex:form>
+    
+</apex:page>

@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Fired when a case is created">
+    <aura:attribute name="accountId" type="ID" />
+</aura:event>

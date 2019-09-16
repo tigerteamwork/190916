@@ -1,0 +1,63 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:lightningQuickAction">
+    
+    <aura:attribute name="newAccount" type="Account" default="{'sobjectType':'Account'}" />
+    <H1>TESTING
+        <BR />
+        {!v.recordId}
+        <br />
+        {!v.recordId.Name}
+        
+    </H1>
+    
+    <lightning:card iconName="standard:case" title="Create Account">
+        <div>
+            {!v.recordId}
+            <br />
+            {!v.recordId.Name}
+            <div>           
+                Current Account Id:  <ui:outputText value="{!v.recordId}" />        
+            </div>
+            <div>           
+                Current Account Name:  <ui:outputText value="{!v.recordId.Name}" />        
+            </div>
+            <div>           
+                Enter New Account Name (ui:inputText):  <ui:inputText value="{!v.newAccount.Name}" Label="ui:inputText" />        
+            </div>
+            <div>           
+                <lightning:input value="v.newAccount.Name" label="lightining:input" onblur="{! c.reDdraw }"/>    
+            </div>
+            <div>           
+                <lightning:inputField fieldName="v.newAccount.Name" label="lightining:inputField" onblur="{! c.reDdraw }"/>
+            </div>
+            <div>           
+                <lightning:inputField fieldName="{!v.newAccount.Name}" label="lightining:inputField with merge syntax" onblur="{! c.reDdraw }"/>
+            </div>
+            <div>           
+                <lightning:input name="{!v.newAccount.Name}" label="lightning:input" onblur="{! c.reDdraw }"/>
+            </div>
+            <div>         
+                <lightning:button variant="brand" label="Save Case" onclick="{!c.createAccount}" />
+            </div>
+        </div>
+        
+    </lightning:card>
+    
+    <lightning:card aura:Id="outputcard" iconName="standard:case" title="Create Account">
+        <div>
+            
+            <div>           
+                You Entered New Account Name (ui:outputText):  <ui:outputText value="{!v.newAccount.Name}" />        
+            </div>
+            
+
+            <div>           
+                <lightning:outputField value="v.newAccount.Name" label="lightining:outputField wiht just quotes"/>
+            </div>
+            <div>           
+                <lightning:outputField value="{!v.newAccount.Name}" label="lightining:outputField with merge syntax"/>
+            </div>
+        </div>
+        
+    </lightning:card>
+    
+</aura:component>

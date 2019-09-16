@@ -1,0 +1,44 @@
+<aura:component >
+    
+    <div class="slds-grid">
+        <div class="slds-col slds-size_5-of-12">
+            
+        </div>
+        
+        <div class="slds-grid">
+            
+        </div>
+        <div class="slds-col slds-size_1-of-12">
+            <lightning:layout class="slds-grid">
+                <div class="slds-col slds-size_2-of-12">
+                </div>
+                <div>
+                    <lightning:layoutItem padding="around-large">
+                        <lightning:helptext
+                                            content="The tooltip displays on the lower left of the icon or above the icon if space is available. It automatically adjusts its position according to the viewport."
+                                            />
+                    </lightning:layoutItem>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                </div>
+                
+            </lightning:layout>
+        </div>
+        <div class="slds-col slds-size_4-of-12" padding-top="12px">
+            
+            <lightning:select name="select1" label="Favorite Color" required="true" >
+                <option value="">choose one...</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+            </lightning:select>
+            
+            
+        </div>
+        <div class="slds-col slds-size_2-of-12">
+            
+        </div>
+        
+    </div>
+    
+</aura:component>

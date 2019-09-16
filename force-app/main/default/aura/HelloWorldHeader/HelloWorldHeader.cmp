@@ -1,0 +1,55 @@
+<aura:component >
+    
+    <lightning:layout>
+    	<lightning:layoutItem padding="around-small">
+        	<lightning:icon iconName="standard:user" alternativeText="User">
+            </lightning:icon>
+        </lightning:layoutItem>
+        
+    </lightning:layout>
+
+      	<lightning:layoutItem padding="around-small">
+
+    <div class="slds-box">
+        <h3 class="header">Default (Long Format)</h3>
+        <lightning:formattedName
+            aura:id="shortName"
+            firstName="John"
+            middleName="Middleton"
+            lastName="Doe"
+            informalName="Jo"
+            suffix="The 3rd"
+            salutation="Mr."
+        />
+        <hr/>
+        <h3 class="header">Short Format</h3>
+        <lightning:formattedName
+            aura:id="defaultName"
+            firstName="John"
+            middleName="Middleton"
+            lastName="Doe"
+            informalName="Jo"
+            suffix="The 3rd"
+            salutation="Mr."
+            format="short"
+        />
+    </div>
+            
+
+            
+            
+        </lightning:layoutItem>
+    
+    
+        	<lightning:layoutItem padding="around-small">
+    <div aura:id="container">
+        <p><lightning:formattedUrl value="my/path" /></p>
+        <p><lightning:formattedUrl value="https://google.com" tooltip="Go to https://my/path" label="My Cool Website" target="_blank" /></p>
+        <p><lightning:formattedUrl value="ftp://my/path" tooltip="Go to ftp://my/path" /></p>
+        <p><lightning:formattedUrl value="http://my/path" /></p>
+        <p><lightning:formattedUrl value="/my/path" /></p>
+        <p><lightning:formattedUrl value=".my/path" /></p>
+    </div>
+        </lightning:layoutItem>
+	
+</aura:component>

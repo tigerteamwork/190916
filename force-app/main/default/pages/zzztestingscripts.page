@@ -1,0 +1,16 @@
+<apex:page >
+    
+    <div class='testid'>
+        <h1 Id = 'root1' action='onmouseover'>
+            the id is testid
+        </h1>
+    </div>
+    
+    <script>
+
+#testid.innerHTML += 'Text to append';    
+    
+   
+    </script>
+    
+</apex:page>

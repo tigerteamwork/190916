@@ -1,0 +1,45 @@
+<aura:component >
+    
+    <aura:attribute name="dob" type="String" />
+    <aura:attribute name="numFeet" type="Integer" default="0"/>
+    <aura:attribute name="numInches" type="Integer" default="0"/>
+    <aura:attribute name="totalMeters" type="Double" default="0"/>
+    <aura:attribute name="totalDays" type="Integer" default="0"/>
+    
+    <aura:handler name="change" value="{!v.dob}" action="{!c.dobChanged}" />
+    <aura:handler name="change" value="{!v.numFeet}" action="{!c.numFeetChanged}" />
+    <aura:handler name="change" value="{!v.numInches}" action="{!c.numInchesChanged}" />
+    
+    <lightning:card title="Hello, ">
+        <p class="slds-p-horizontal_small">
+            <ui:inputDate value="{!v.dob}" displayDatePicker="true" label="My date-of-birth is:  "/>
+        </p>
+    </lightning:card>
+    
+    <lightning:card title="My height is:  ">
+        <p class="slds-p-horizontal_small">
+            <ui:inputNumber value="{!v.numFeet}" updateOn="keyup" label="feet:  " />
+            <ui:inputNumber value="{!v.numInches}" updateOn="keyup" label="inches:  "/>
+        </p>
+    </lightning:card>
+    
+    <div>
+        <div class="halfpage">
+            <lightning:card title="Conversion:  ">
+                <p class="slds-p-horizontal_small">
+                    Numbers of days since birth:  <ui:outputNumber value="{!v.totalDays}" />
+                </p>
+            </lightning:card>    
+        </div>
+        
+        <div class="halfpage" >
+            <lightning:card title="Conversion:  ">
+                <p class="slds-p-horizontal_small">
+                    Total height (in meters):  <ui:outputNumber value="{!v.totalMeters}" />
+                </p>
+            </lightning:card>
+        </div>
+        
+    </div>
+    
+</aura:component>

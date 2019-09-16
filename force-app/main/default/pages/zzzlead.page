@@ -1,0 +1,7 @@
+<apex:page standardController="Lead">
+    
+    
+    
+	{!lead.name}
+    {!lead.owner.name}
+</apex:page>

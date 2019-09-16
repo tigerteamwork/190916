@@ -1,0 +1,8 @@
+<apex:page controller="MyCustomController">
+    
+    <apex:pageBlock >
+        <apex:outputField value="{!myClass.Name}"/>
+    </apex:pageBlock>
+    
+    
+</apex:page>

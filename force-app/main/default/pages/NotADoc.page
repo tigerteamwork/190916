@@ -1,0 +1,72 @@
+<apex:page standardController="ReasonForVisit__c">
+    
+    <style>
+        .widthhalf{width:49.4%;display:inline-block;}
+        .widthquarter{width:24.4%;display:inline-block;}
+    </style>
+    
+    <apex:form >
+        <apex:pageBlock title="Tell Us About Your Visit" >     
+            <div class="widthhalf">
+                <div class="widthhalf">    
+                    <apex:pageBlockSection title="How Are Your Feeling?">            
+                        <apex:inputField value="{!ReasonForVisit__c.Symptom1__c}">
+                            <apex:actionSupport event="onchange" reRender="moreinfo, links"/>   
+                        </apex:inputField>    
+                        <br />
+                        <apex:inputField value="{!ReasonForVisit__c.Symptom2__c}">
+                            <apex:actionSupport event="onchange" reRender="moreinfo, links"/>   
+                        </apex:inputField>  
+                    </apex:pageBlockSection> 
+                </div>
+                <div class="widthhalf">
+                    <apex:pageblockSection title="Possible Conditions For Your Symptoms" >
+                        <apex:inputField value="{!ReasonForVisit__c.Condition1__c}">
+                            <apex:actionSupport event="onchange" reRender="moreinfo, links"/>   
+                        </apex:inputField>  
+                        <br />
+                        <apex:inputField value="{!ReasonForVisit__c.Condition2__c}">
+                            <apex:actionSupport event="onchange" reRender="moreinfo, links"/>   
+                        </apex:inputField>  
+                    </apex:pageBlockSection>
+                </div>
+            </div>
+            <div class="widthhalf">
+                <apex:pageBlockSection title="Other Questions For Your Visit">           
+                    <apex:inputTextarea rows="3" cols="80">
+                    </apex:inputTextarea>
+                </apex:pageBlockSection>
+            </div>
+        </apex:pageBlock>    
+        
+        <apex:pageBlock title="More Information" >
+            <div class="widthhalf">
+                <apex:pageblockSection title="Mayo Clinic Patient Information" id="moreinfo" >
+                    <div>
+                        <a href="https://www.mayoclinic.org/search/search-results?q={!ReasonForVisit__c.Condition1__c}" target="_blank">More At Mayo Clinic:  {!ReasonForVisit__c.Condition1__c}</a>
+                    </div>
+                    <div>
+                        <a href="https://www.mayoclinic.org/search/search-results?q={!ReasonForVisit__c.Condition2__c}" target="_blank">More At Mayo Clinic:  {!ReasonForVisit__c.Condition2__c}</a>
+                    </div>
+                </apex:pageblockSection>
+                
+            </div>
+            <div class="widthhalf">
+                <apex:pageblockSection title="Google Links" id="links" >
+                    <div>
+                        <a href="https://www.google.com/search?q={!ReasonForVisit__c.Condition1__c}" target="_blank">More At Google:  {!ReasonForVisit__c.Condition1__c}</a>
+                    </div>
+                    <div>
+                        <a href="https://www.google.com/search?q={!ReasonForVisit__c.Condition2__c}" target="_blank">More At Google:  {!ReasonForVisit__c.Condition2__c}</a>
+                    </div>
+                </apex:pageBlockSection>
+                
+            </div>
+        </apex:pageBlock>  
+        
+        <apex:pageBlock title="Let Us Help You Schedule A Visit">   
+        </apex:pageBlock>
+        
+    </apex:form>
+    
+</apex:page>

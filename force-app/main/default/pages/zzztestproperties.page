@@ -1,0 +1,7 @@
+<apex:page controller="zzztestproperties" docType="html-5.0">
+    <apex:form >
+    hello {!myNumber}
+    <apex:input value="{!myNumber}"/>
+    hello again {!myNumber}
+    </apex:form>
+</apex:page>

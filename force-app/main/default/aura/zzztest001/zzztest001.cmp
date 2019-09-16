@@ -1,0 +1,41 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId" >
+    
+    
+<!--    
+    <aura:attribute name="newCase" type="Case" default="{'sobjectType' : 'Case'}"/>
+    
+    <aura:registerEvent name="caseCreatedEvent" type="c:CaseCreatedEvent" />
+
+-->
+    
+    <lightning:card iconName="standard:case" title="zzztest001">
+        <div class="slds-form--stacked">
+            <div class="slds-form-element">
+                Case status:  <force:inputField value="{!v.RecordId}" />        
+            </div>
+            
+            <div class="slds-form-element">           
+                Case Origin:  <force:inputField value="{!v.RecordId}" />        
+            </div>
+            
+            <div class="slds-form-element">         
+                <lightning:button variant="brand" label="Save Case" onclick="{!save}" />
+            </div>
+            
+        </div>
+        
+    </lightning:card>
+    
+    has record ID
+    <br />
+    
+    
+    contact name:
+    <br />
+    
+    track: 
+    <br />
+    
+    
+    
+</aura:component>

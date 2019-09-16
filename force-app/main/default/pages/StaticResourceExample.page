@@ -1,0 +1,11 @@
+<apex:page >
+    <div>
+        
+        <apex:image url="{!$Resource.bearsimage}"/>
+                   
+    </div>
+    
+    <div>
+        <apex:image url="{!urlfor($Resource.images, 'images/bears.jpeg')}"/>
+    </div>
+</apex:page>

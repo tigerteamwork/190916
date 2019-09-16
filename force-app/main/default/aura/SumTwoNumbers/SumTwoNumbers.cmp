@@ -1,0 +1,30 @@
+<aura:component >
+    <!-- Attributes -->
+    <aura:attribute name="numOne" type="Integer" default="5"/>
+    <aura:attribute name="numTwo" type="Integer" description="Number Two"/>
+    <aura:attribute name="sum" type="Integer"/>
+    <aura:attribute name="changedText" type="String" />
+    
+    <!-- Handler -->
+    <!-- c is called a value provider -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.sum}" action="{!c.sumChanged}" />
+    
+    <!-- Everything else -->
+    
+    <!-- v is called the value provider -->
+    <ui:inputNumber label="Enter a number" value="{!v.numOne}" />
+    <lightning:input type="number"
+                     value="{!v.numTwo}"
+                     placeHolder=""
+                     label="Enter a Number: " />
+    
+    <lightning:button variant="brand" label="Add" onclick="{!c.addNumbers}"/>
+    
+    <h1>{!v.numOne + ' ' + v.numTwo + ' = ' + (v.numOne + v.numTwo)}</h1>
+    <h1>{!v.sum}</h1>
+    <h1>{!v.changedText}</h1>
+    
+    
+    
+</aura:component>

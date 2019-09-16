@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="FirstName" type="String" default="Matt"/>
+    <aura:attribute name="LastName" type="String" default="Ruiz"/>
+    
+    <h1 class="firstH1">
+        <span class="lightning">Welcome to LIGHTNING </span>{!v.FirstName} &nbsp; {!v.LastName}
+
+        Welcome to LIGHTNING {!v.FirstName + ' ' + v.LastName}
+
+    </h1>
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:component >
+    
+    <c:HelloWorldHeader>
+    </c:HelloWorldHeader>
+    
+    <c:HelloWorldBody>
+    </c:HelloWorldBody>
+	    
+</aura:component>

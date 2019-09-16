@@ -1,0 +1,8 @@
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:pageBlockSection >
+        </apex:pageBlockSection>
+        
+        
+    </apex:form>
+</apex:page>

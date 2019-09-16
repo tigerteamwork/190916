@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="userInput" type="String" />    
+    <aura:attribute name="appMessage" type="String" default="message" />    
+    <aura:attribute name="buttonLabel" type="String" default="search" />    
+    <aura:attribute name="contactRecord" type="Object" />    
+    
+    
+    <lightning:input type="text" value="{!v.userInput}" />
+    <lightning:button variant="Brand" label="{!v.buttonLabel}" onclick="{!c.handleClick}" />
+    <lightning:formattedText value="{!v.appMessage}" />
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="0033i000002OMJNAA4"
+                      fields="Name, Account.Name" 
+                      targetFields="{!v.contactRecord}"
+                      />
+    <lightning:formattedText value="{!v.contactRecord.Name}" />
+    <lightning:formattedText value="{!v.contactRecord.Account.Name}" />
+    
+</aura:component>

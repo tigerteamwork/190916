@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="accountId" type="ID" />
+    
+    <aura:handler event="c:CaseCreatedEvent" action="{!c.handleCaseCreatedEvent}" />
+    
+    <lightning:card iconName="standard:account" title="">
+        <force:recordView recordId="{!v.accountId}" />
+    </lightning:card>
+    
+</aura:component>

@@ -1,0 +1,33 @@
+<apex:page docType="html-5.0" standardController="Account" extensions="ControllerForVFExercises">
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Find Accounts">
+            
+            <apex:form >
+                <apex:input type="text" value="{!varUserInput}" label="Enter Account name:  "/>
+                <apex:commandButton action="{!findAccounts}" value="Find Accounts"/>  
+                
+                <apex:pageBlockTable value="{!listOfAccounts}" var="acc" columns="5">
+                    
+                    <apex:column >
+                        <apex:inputText value="{!acc.Id}" id="idButton"/>
+                    </apex:column> title="Name" value="{!acc.Id}"/>
+                    
+                    <apex:column title="Name" value="{!acc.Name}"/>
+                    
+                    <apex:column title="Number of Employees" value="{!acc.NumberOfEmployees}"/>
+                    
+                    <apex:column title="Billing State" value="{!acc.BillingState}"/>
+                    
+                    <apex:column title="Buttons">
+                        <apex:commandButton action="{!goToAccountDetails}" value="Get Account Details" />
+                    </apex:column>
+                    
+                </apex:pageBlockTable> 
+                
+            </apex:form>
+            <apex:detail subject="{!listOfAccounts[0].Id}" relatedList="true" title="false"/>
+            <apex:relatedList list="Contacts"/>
+            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

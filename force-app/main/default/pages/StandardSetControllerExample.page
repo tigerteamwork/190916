@@ -1,0 +1,39 @@
+<apex:page standardController="Account" recordSetVar="accounts" extensions="PaginationExtension">
+    <apex:form >
+        <apex:dataTable value="{!displayedAccounts}" var="acc">
+            <apex:column >
+                <apex:facet name="caption">Account caption</apex:facet>
+                <apex:facet name="header">Account header</apex:facet>
+                <apex:facet name="footer">Account footer</apex:facet>
+                
+                <apex:outputText value="{!acc.Name}"/>
+            </apex:column>
+        </apex:dataTable>
+        
+        
+        <apex:pageBlock title="Pagination">
+            <apex:pageBlockTable value="{!displayedaccounts}" var="acc">
+                <apex:column >
+                    <apex:facet name="caption">Account caption</apex:facet>
+                    <apex:facet name="header">Account header</apex:facet>
+                    <apex:facet name="footer">Account footer</apex:facet>
+                    <apex:outputText value="{!acc.Name}"/>
+                    
+                </apex:column>
+                
+                
+            </apex:pageBlockTable>
+            
+            
+            <apex:repeat value="{!displayedaccounts}" var="acc">
+                Account Name: <apex:outputText value="{!acc.name}"/> <br />
+            </apex:repeat>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!setController.previous}" value="Previous" disabled="{!NOT(setController.hasPrevious)}"/>
+                <apex:commandButton action="{!setController.next}" value="Next" disabled="{!NOT(setController.hasNext)}"/>           
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

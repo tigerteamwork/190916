@@ -1,0 +1,23 @@
+<apex:page docType="HTML-5.0" standardController="Contact" recordSetVar="contactList" extensions="zzztest001">
+    <apex:form >
+        
+        
+        
+        <apex:input value="{!userNumber}" label="which number">
+        </apex:input>
+        
+        <apex:outputText value="{!userNumber}" label="your number is: "/>
+        <br />
+        {!workingContact.name}
+        <br/>
+        {!workingContact.account.name}
+        
+        <apex:pageblock >
+        <apex:pageBlockTable value="{!contactList}" var="item">
+            <apex:column value="{!item.name}" />
+            
+            </apex:pageBlockTable>
+        </apex:pageblock>
+        
+    </apex:form>
+</apex:page>
