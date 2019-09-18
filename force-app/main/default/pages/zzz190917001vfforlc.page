@@ -1,0 +1,33 @@
+<apex:page >
+    
+    
+    <apex:pageBlock >
+        <div>
+            <h2>
+                This is a VF page which holds a Lightning Component.
+            </h2>
+        </div>
+    </apex:pageBlock>
+    
+    
+    
+    <apex:pageBlock >
+        <div>
+            <apex:includeLightning />
+            <div id="placeholderForLightningComponent" >
+            </div>
+            <script >
+            $Lightning.use("c:zzz190917001app", function() {
+                $Lightning.createComponent("c:zzz190917001cmp",
+                                           {},
+                                           "placeholderForLightningComponent",
+                                           function(component) {
+                                           });
+            });
+            </script>  
+        </div>
+    </apex:pageBlock>
+    
+    
+    
+</apex:page>

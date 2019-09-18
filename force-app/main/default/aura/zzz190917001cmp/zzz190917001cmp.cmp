@@ -1,0 +1,72 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    
+    
+    <aura:attribute name="contactRecord" type="Object" />
+    <aura:attribute name="recordID" type="Object" default="0033i0000023al2" />
+    <aura:attribute name="columns" type="List"/>
+    
+    
+    
+    <div >
+        <h2>
+            This is a lightning cmp.
+        </h2>
+        <ul>
+            <li>
+                This should be on the computer lightning app and in a VF page.
+            </li>
+            <li>
+                This should be on the phone in a lightning component and in a VF page.
+            </li>
+        </ul>
+    </div>
+    
+    
+    
+    <div>
+        <h2>
+            This is force:recordData in HTML table.
+        </h2>
+        <force:recordData aura:id="recordLoader"
+                          recordId="{!v.recordID}"
+                          fields="Id, Name, Account.Name"
+                          targetFields="{!v.contactRecord}"
+                          />
+        <table>
+            <tr>
+                <td>
+                    <lightning:formattedText value="{!v.contactRecord.Id}" />
+                </td>
+                <td>
+                    <lightning:formattedText value="{!v.contactRecord.Name}" />
+                </td>
+                <td>
+                    <lightning:formattedText value="{!v.contactRecord.Account.Name}" />
+                </td>
+            </tr>
+        </table>
+        
+        <div>
+            <h2>
+                This is a lightning data table.
+            </h2>
+            <lightning:datatable
+                                 columns="{! v.columns }"
+                                 data="{! v.recordId }"
+                                 />
+        </div>
+    </div>
+    
+    
+    
+    <div >
+        <h2>
+            This is the iframe for the VF page.
+        </h2>
+        <iframe src="https://tigerteamwork-dev-ed--c.visualforce.com/apex/zzz190917001vf?core.apexpages.request.devconsole=1" width="100%" height="400">
+        </iframe>
+    </div>
+    
+    
+    
+</aura:component>

@@ -1,5 +1,7 @@
 <apex:page standardController="Contact" recordSetVar="contactList" extensions="VFUserInputControllerExtension" docType="html-5.0">
     
+    <apex:includeLightning />
+    
     <apex:form >
         <apex:pageBlock >
             <apex:outputText value="{!messageFromController}">
@@ -20,7 +22,53 @@
         
         <apex:commandLink value="Try http REST" action="{!sendHttpRequest}" target="_blank" />
         
-        
     </apex:form>
+    
+    <apex:relatedList list="Cases" pageSize="1" >
+    </apex:relatedList>
+    
+    
+    
+    <div id="divToDisplayLightning"></div> 
+    <script>
+    $Lightning.use("c:zzz190916004dependenciesforVFpage", function() {
+        $Lightning.createComponent("lightning:button",
+                                   { label : "Press Me!" },
+                                   "divToDisplayLightning",
+                                   function(cmp) {
+                                       console.log("button was created");
+                                       // do some stuff
+                                   }
+                                  );
+    });
+    </script>
+    
+    
+    
+    <apex:includeLightning />
+    <div id="divToPutLightning"></div> 
+    <script>
+    // Here 'VfApp' Is Lightning Application Name
+    $Lightning.use("c:zzz190916004dependenciesforVFpage", function() {
+        /* 'LcForVf' is Lightning Component Name which we are Displaying In Vf Page 
+       * syntax for create lightning component dynamically :
+       * $Lightning.createComponent(String type, Object attributes, String locator, function callback) */
+        $Lightning.createComponent("c:zzz190916001",
+                                   { 
+                                       // Set Lightning Component Attributes Property before creating Lightning Component In Visualforce page 
+                                       /*
+                                       textColor : "Red",
+                                       currentUserName : '{!$User.FirstName} {!$User.LastName}' 
+                                       */
+                                   },
+                                   "divToPutLightning",
+                                   function(component) {
+                                       // create component Callback, Lightning Component has been Created,
+                                       // Now you can set more lightning Component attributes here,
+                                       // and do more cool stuff here
+                                       component.set("v.accId" , '{!$CurrentPage.parameters.recId}');
+                                   });
+    });
+    </script>
     
 </apex:page>

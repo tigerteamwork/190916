@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <iframe src="https://tigerteamwork-dev-ed--c.visualforce.com/apex/zzztest003?core.apexpages.request.devconsole=1" width="100%" height="500px" framBorder="0" />
+    
+</aura:component>

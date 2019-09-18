@@ -1,0 +1,24 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="contactRecord" type="Object" />
+    <aura:attribute name="userInput" type="String" />
+    
+    
+    <lightning:input value="{!v.userInput}" />
+    
+    <lightning:formattedText value="{!v.userInput}" />
+    
+        <force:recordData aura:id="recordLoader"
+                          recordId="{!v.recordId}"
+                          fields="Id, Name, AccountId"
+                          targetFields="{!v.contactRecord}"
+                          />
+        
+        <lightning:formattedText value="{!v.contactRecord.Id}" />
+        
+        <lightning:formattedText value="{!v.contactRecord.Name}" />
+        
+        <lightning:formattedText value="{!v.contactRecord.AccountId}" />
+    
+</aura:component>
